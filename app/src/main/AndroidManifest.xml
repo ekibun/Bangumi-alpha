@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="soko.ekibun.bangumi">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+            android:name=".App"
+            android:allowBackup="false"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="false"
+            android:theme="@style/AppTheme">
+        <activity
+                android:name="com.tencent.tauth.AuthActivity"
+                android:launchMode="singleTask"
+                android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1106777609"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.tencent.connect.common.AssistActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+                android:name=".activity.SplashActivity"
+                android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity">
+        </activity>
+        <activity android:name=".activity.SearchActivity">
+        </activity>
+        <activity
+                android:name=".activity.DetailActivity"
+                android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+                android:resizeableActivity="true"
+                android:screenOrientation="portrait"
+                android:supportsPictureInPicture="true"
+                tools:ignore="UnusedAttribute">
+        </activity>
+
+        <service
+                android:name=".service.DownloadService"
+                android:exported="false">
+        </service>
+
+        <activity android:name=".activity.SettingsActivity">
+        </activity>
+        <activity
+                android:name=".activity.ShareActivity"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:clearTaskOnLaunch="true"
+                android:finishOnTaskLaunch="true"
+                android:autoRemoveFromRecents="true"
+                android:excludeFromRecents="true"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                        android:host="dilidili.wang"
+                        android:pathPrefix="/anime/"
+                        android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                        android:host="qq.com"
+                        android:pathPrefix="/detail/"
+                        android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                        android:host="youku.com"
+                        android:pathPrefix="/show/"
+                        android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                        android:host="iqiyi.com"
+                        android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                        android:host="pptv.com"
+                        android:pathPrefix="/show/"
+                        android:scheme="http" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

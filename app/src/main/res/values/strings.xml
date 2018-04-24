@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Bangumi</string>
+    <string name="search_hint">搜索…</string>
+    <string name="desc_cover">番剧海报</string>
+    <string name="chase_bangumi">追番</string>
+    <string name="has_chase_bangumi">已追番</string>
+
+    <string name="av_title">第 %1$d 话</string>
+    <string name="phrase_full">全 %1$d 话</string>
+    <string name="phrase_time">%1$s/%2$s</string>
+    <string name="phrase_updating">更新至第 %1$d 话</string>
+    <string name="load_video_failed">获取视频失败</string>
+    <string name="download_cache">离线缓存</string>
+    <string name="settings">设置</string>
+
+    <string name="navigation_drawer_open">导航开</string>
+    <string name="navigation_drawer_close">导航关</string>
+    <string name="danmaku">弹幕</string>
+    <string name="fullscreen">全屏</string>
+    <string name="play_pause">播放</string>
+    <string name="next_video">下一集</string>
+    <string name="user_cancel">用户取消</string>
+
+    <string name="err_not_login">登录才可以追番哟~</string>
+    <string name="err_network">电波无法到达哟</string>
+    <string name="err_load">加载失败了∑(OДO</string>
+    <string name="share">分享</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cl_chase"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:focusable="true">
+    <TextView
+            android:text="@string/chase_bangumi"
+            android:id="@+id/tv_chase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_chase"
+            app:layout_constraintRight_toRightOf="parent"/>
+    <ImageView
+            android:id="@+id/iv_chase"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_heart_outline"
+            android:layout_marginRight="4dp"
+            android:tint="@android:color/white"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="@id/tv_chase"
+            app:layout_constraintBottom_toBottomOf="@id/tv_chase"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_chase"
+            tools:ignore="RtlHardcoded"
+            android:contentDescription="@string/desc_cover"/>
+</android.support.constraint.ConstraintLayout>

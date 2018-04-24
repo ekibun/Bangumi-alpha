@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:background="?attr/colorPrimary">
+
+    <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:srcCompat="@drawable/ic_splash"
+            android:tint="?attr/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintHorizontal_bias="0.90"
+            android:layout_marginStart="500dp"
+            tools:ignore="ContentDescription"/>
+    <LinearLayout
+            android:id="@+id/user_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:gravity="bottom">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:srcCompat="@drawable/akkarin"
+                app:siBorderWidth="1dp"
+                app:siBorderColor="@android:color/white"
+                app:siBorderAlpha="0.5"
+                android:id="@+id/user_figure"/>
+
+        <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
